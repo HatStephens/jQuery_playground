@@ -1,13 +1,13 @@
-body {
+/*body {
 	background: #222;
 	color: #EEE;
 	font: 1.5rem Arial, Verdana, Sans-Serif;
 	margin: 0;
 	padding: 5%;
 	text-align: center;
-}
-              
-a {
+}*/
+
+.link {
 	margin: 10%;
 	font-size: 1rem;
 	font-weight: 700;
@@ -16,4 +16,30 @@ a {
 
 button {
 	color: black !important;
+}
+
+h3 {
+	color: red;
+}
+
+input {
+	color: black;
+}
+
+.tick {
+	content: "OOOO";
+}
+
+.done {
+	text-decoration: none;
+	color: red;
+}
+
+
+p {
+	display: inline;
+}
+
+.input_elements {
+	min-height: 140px;
 }
