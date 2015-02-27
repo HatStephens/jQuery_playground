@@ -43,3 +43,7 @@ p {
 .input_elements {
 	min-height: 140px;
 }
+
+.hidden {
+	display: none;
+}

@@ -34,18 +34,28 @@ $(function(){
     $('#to_do_item').val('')
     $(':text').focus();
 
+    if($('li')){
+      $('#remove_all').removeClass("hidden");
+    }
 
   });
 
+
   $('#to_do_list').on('click', '.done', function(e){
     completed_item = "<li>"+($(this).prev().text())+"</li>"
-    $(this).parent().fadeOut(500);
+    $(this).parent().fadeOut(500).delay(500, function(){
+      $(this).remove()
+      if($('#to_do_list>li').length === 0){
+        $('#remove_all').addClass("hidden");
+      }
+    });
     $(completed_item).appendTo('#finished_list').hide().delay(500).fadeIn(500);
   });
 
   $('#remove_all').on('click', function(e){
-    $('li').remove();
+    $('#to_do_list>li').remove();
     $(':text').focus();
+    $('#remove_all').addClass("hidden");
   });
 
 });
